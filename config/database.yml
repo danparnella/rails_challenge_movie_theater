@@ -1,0 +1,13 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_challenge_movie_theater_dev
+  pool: 5
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rails_challenge_movie_theater_test
+  pool: 5
+  host: localhost
