@@ -39,3 +39,5 @@ Requirements:
 - Push code to GitHub and delpoy to Heroku (provide both links when finished)
 
 - Created [DB Diagram](https://dbdiagram.io/d/60a2e757b29a09603d154743)
+
+- Not sure if a Customer should have orders or if an Order should have customers.
