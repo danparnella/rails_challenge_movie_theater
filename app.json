@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
+  "name": "rails-challenge-movie-theater",
+  "description": "Rails Challenge: Movie Theater",
   "scripts": {
     "postdeploy": "bundle exec rake db:migrate && rake db:seed"
   },
@@ -28,9 +28,6 @@
     },
     "SECRET_KEY_BASE": {
       "required": true
-    },
-    "SENTRY_URL" : {
-      "required": true
     }
   },
   "formation": {
@@ -42,5 +39,6 @@
     {
       "url": "heroku/ruby"
     }
-  ]
+  ],
+  "stack": "heroku-18"
 }
