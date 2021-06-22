@@ -5,7 +5,6 @@ ruby '2.7.0'
 
 gem 'rails', '6.1.3.1'
 gem 'token_master', '~> 1.0'
-gem 'sentry-raven', '~> 2.0'
 gem 'rubocop-performance'
 gem 'rubocop'
 gem 'rails_util', github: 'launchpadlab/rails_util'
