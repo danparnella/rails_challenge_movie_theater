@@ -1,5 +1,5 @@
 FactoryBot.define do
   factory :movie do
-    name { "MyString" }
+    name { "Iron Man" }
   end
 end
