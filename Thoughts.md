@@ -1,8 +1,8 @@
 # Movie Theater
 
-Goal: Selling movie tickets online and tracking orders.
+## Goal: Selling movie tickets online and tracking orders.
 
-Requirements:
+## Requirements:
 
 - List all movies playing with cost
 - Display showtimes for each movie
@@ -38,6 +38,14 @@ Requirements:
 - Capture thought processes in Readme file
 - Push code to GitHub and delpoy to Heroku (provide both links when finished)
 
+## Modeling
 - Created [DB Diagram](https://dbdiagram.io/d/60a2e757b29a09603d154743)
 
 - Not sure if a Customer should have orders or if an Order should have customers.
+  - Update: Realized a Customer would have many orders (whereas an Order would only have one Customer), so an Order should belong to a Customer and not the other way around
+
+
+## Future Enhancements
+- Validations for datetimes
+- Encrypting CC data (although normally this would just be sent to a payment processor and we wouldn't store any of this data)
+
