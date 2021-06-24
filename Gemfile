@@ -5,12 +5,11 @@ ruby '2.7.0'
 
 gem 'rails', '6.1.3.1'
 gem 'token_master', '~> 1.0'
-gem 'sentry-raven', '~> 2.0'
 gem 'rubocop-performance'
 gem 'rubocop'
 gem 'rails_util', github: 'launchpadlab/rails_util'
 gem 'rack-cors', '~> 1.0'
-gem 'paper_trail', '~> 10.0'
+gem 'paper_trail', '~> 11.0'
 gem 'lp_token_auth', '~> 0.3'
 gem 'figaro', '~> 1.0'
 gem 'decanter', '~> 3.0'
@@ -27,12 +26,15 @@ gem 'webpacker', '~> 5.0'
 
 gem 'turbolinks', '~> 5'
 
+# newly added
+gem 'credit_card_validations'
+
 
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  gem 'rspec-rails', '4.0.0.beta3'
+  gem 'rspec-rails', '~> 4.0'
   gem 'pry-rails', '~> 0.3'
   gem 'faker', '~> 1.0'
   gem 'factory_bot_rails', '~> 5.0'
@@ -56,4 +58,4 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
