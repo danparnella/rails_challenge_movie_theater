@@ -30,7 +30,7 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  gem 'rspec-rails', '4.0.0.beta3'
+  gem 'rspec-rails', '~> 4.0'
   gem 'pry-rails', '~> 0.3'
   gem 'faker', '~> 1.0'
   gem 'factory_bot_rails', '~> 5.0'
