@@ -25,6 +25,9 @@ gem 'webpacker', '~> 5.0'
 
 gem 'turbolinks', '~> 5'
 
+# newly added
+gem 'credit_card_validations'
+
 
 
 gem 'bootsnap', '>= 1.4.4', require: false
