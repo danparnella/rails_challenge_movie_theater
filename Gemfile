@@ -9,6 +9,7 @@ gem 'rubocop-performance'
 gem 'rubocop'
 gem 'rails_util', github: 'launchpadlab/rails_util'
 gem 'rack-cors', '~> 1.0'
+gem 'paper_trail', '~> 11.0'
 gem 'lp_token_auth', '~> 0.3'
 gem 'figaro', '~> 1.0'
 gem 'decanter', '~> 3.0'
@@ -57,4 +58,4 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+# gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
