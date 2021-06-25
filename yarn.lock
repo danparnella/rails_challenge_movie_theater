@@ -885,6 +885,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@launchpadlab/prettier-config@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@launchpadlab/prettier-config/-/prettier-config-1.0.0.tgz#cb1f0d0ae714d3faa4543bce89b82961f86bf340"
+  integrity sha512-YvTfVI4hnA4G/fJyeIGX1eivdTPZOB+JIOCdFm5zWRuijJ1V371tA/WeXxSSKYNhj1Tk6+eEZI0WFd++uHVFag==
+
 "@npmcli/move-file@^1.0.1":
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/@npmcli/move-file/-/move-file-1.1.2.tgz#1a82c3e372f7cae9253eb66d72543d6b8685c674"

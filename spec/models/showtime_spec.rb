@@ -11,4 +11,5 @@ RSpec.describe Showtime, type: :model do
   it { should validate_numericality_of(:tickets_available).is_greater_than_or_equal_to(0) }
   it { should validate_numericality_of(:tickets_available).only_integer }
   it { should validate_numericality_of(:cost).is_greater_than_or_equal_to(0) }
+  it { should validate_numericality_of(:cost).only_integer }
 end

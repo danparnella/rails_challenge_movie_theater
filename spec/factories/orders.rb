@@ -4,7 +4,6 @@ FactoryBot.define do
     cc_number { CreditCardValidations::Factory.random(:visa) }
     cc_expiration { "05/2025".to_date }
     cc_security_code { "123" }
-    total_cost { 49.50 }
     showtime
     customer
 

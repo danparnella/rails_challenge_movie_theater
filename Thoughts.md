@@ -19,7 +19,7 @@
   - Valid Credit Card Number
   - Valid Expiration Date (in the future)
 - Will not integrate with CC processor for now
-- Send an unstyle email after order completion with:
+- Send an unstyled email after order completion with:
   - Order Details:
     - Movie Name
     - Showtime (date & time)
@@ -36,7 +36,7 @@
     - Revenue by day of the week
 - Site must work on mobile
 - Capture thought processes in Readme file
-- Push code to GitHub and delpoy to Heroku (provide both links when finished)
+- Push code to GitHub and deploy to Heroku (provide both links when finished)
 
 ## Modeling
 - Created [DB Diagram](https://dbdiagram.io/d/60a2e757b29a09603d154743)
@@ -48,4 +48,5 @@
 ## Future Enhancements
 - Validations for datetimes
 - Encrypting CC data (although normally this would just be sent to a payment processor and we wouldn't store any of this data)
+- Implement [Money Gem](https://github.com/RubyMoney/money)
 

@@ -1,0 +1,7 @@
+<h1>Marvelous Matinée Movies</h1>
+<h2>Check out the current movies we have to offer and choose a showtime!</h2>
+<div>
+  <% @movies.each do |movie| %>
+    <%= render 'movie', movie: movie %>
+  <% end %>
+</div>
