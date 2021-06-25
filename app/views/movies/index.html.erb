@@ -6,7 +6,7 @@
     <ul>
       <% movie.showtimes.dates_only.each do |date| %>
         <li>
-          <h4><%= date.to_s(:long_ordinal) %></h4>
+          <h4><%= formatted_date(date) %></h4>
           <ul>
             <% movie.showtimes.for_date(date).each do |showtime| %>
               <li>
