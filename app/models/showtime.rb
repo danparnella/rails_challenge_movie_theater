@@ -9,6 +9,8 @@ class Showtime < ApplicationRecord
   validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true }
 
   scope :by_date_time, -> (direction = :ASC) { order(date_time: direction) }
-  scope :dates_only, -> () { by_date_time.pluck(:date_time).map(&:to_date).uniq }
+  scope :dates_only, -> { by_date_time.pluck(:date_time).map(&:to_date).uniq }
   scope :for_date, -> (date) { by_date_time.where(date_time: date.all_day) }
+  scope :not_past, -> { where('date_time > ?', DateTime.now) }
+
 end
