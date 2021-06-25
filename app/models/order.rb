@@ -10,4 +10,8 @@ class Order < ApplicationRecord
   def total_cost
     quantity * showtime.cost
   end
+
+  def total_cost_dollars
+    '%.2f' % (total_cost.to_f / 100)
+  end
 end

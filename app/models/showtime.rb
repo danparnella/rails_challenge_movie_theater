@@ -5,5 +5,10 @@ class Showtime < ApplicationRecord
 
   validates :date_time, presence: true
   validates :tickets_available, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true }
-  validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0 }
+  # stored as cents
+  validates :cost, presence: true, numericality: { greater_than_or_equal_to: 0, only_integer: true }
+
+  def cost_dollars
+    '%.2f' % (cost.to_f / 100)
+  end
 end
