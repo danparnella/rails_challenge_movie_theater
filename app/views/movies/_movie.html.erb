@@ -1,0 +1,13 @@
+<h3><%= movie.name %></h3>
+<ul>
+  <% movie.showtimes.dates_only.each do |date| %>
+    <li>
+      <h4><%= formatted_date(date) %></h4>
+      <ul>
+        <% movie.showtimes.for_date(date).each do |showtime| %>
+          <%= render 'showtime', showtime: showtime %>
+        <% end %>
+      </ul>
+    </li>
+  <% end %>
+</ul>

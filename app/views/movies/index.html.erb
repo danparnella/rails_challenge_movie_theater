@@ -2,22 +2,6 @@
 <h2>Check out the current movies we have to offer and choose a showtime!</h2>
 <div>
   <% @movies.each do |movie| %>
-    <h3><%= movie.name %></h3>
-    <ul>
-      <% movie.showtimes.dates_only.each do |date| %>
-        <li>
-          <h4><%= formatted_date(date) %></h4>
-          <ul>
-            <% movie.showtimes.for_date(date).each do |showtime| %>
-              <li>
-                <p><%= formatted_time(showtime) %></p>
-                <p><%= "Cost: $#{cost_dollars(showtime)} per ticket" %></p>
-                <p><%= "Seats Available: #{showtime.tickets_available}" %></p>
-              </li>
-            <% end %>
-          </ul>
-        </li>
-      <% end %>
-    </ul>
+    <%= render 'movie', movie: movie %>
   <% end %>
 </div>
