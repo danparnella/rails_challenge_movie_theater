@@ -49,4 +49,6 @@
 - Validations for datetimes
 - Encrypting CC data (although normally this would just be sent to a payment processor and we wouldn't store any of this data)
 - Implement [Money Gem](https://github.com/RubyMoney/money)
+- Redirect to root if trying to access order show view outside of that specific order flow
+- Tooltip to explain CVV Code
 

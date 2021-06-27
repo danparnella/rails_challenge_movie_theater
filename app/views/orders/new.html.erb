@@ -1,0 +1,10 @@
+<h1><%= "Purchase tickets for #{@showtime.movie.name}" %></h1>
+<p>
+  <%= "You have selected the #{formatted_time(@showtime)}
+       showing of #{@showtime.movie.name} on
+       #{formatted_date(@showtime.date_time.to_date)}." %>
+</p>
+<p>Please fill out the fields below to place your order.</p>
+<%= render 'form', showtime: @showtime, order: @order, error_msgs: @error_msgs %>
+
+<%= javascript_pack_tag 'order' %>

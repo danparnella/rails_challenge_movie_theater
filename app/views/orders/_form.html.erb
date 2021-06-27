@@ -1,0 +1,5 @@
+<%= form_for(order, url: showtime_orders_path) do |f| %>
+  <%= render 'order_details', showtime: showtime, order: order, f: f %>
+  <%= render 'billing_details', error_msgs: error_msgs, f: f %>
+  <%= f.submit 'Purchase Tickets' %>
+<% end %>

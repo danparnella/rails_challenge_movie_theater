@@ -13,4 +13,12 @@ class Showtime < ApplicationRecord
   scope :for_date, -> (date) { by_date_time.where(date_time: date.all_day) }
   scope :not_past, -> { where('date_time > ?', DateTime.now) }
 
+  def sold_out?
+    tickets_available == 0
+  end
+
+  def decrease_available_tickets(count)
+    update!(tickets_available: tickets_available - count)
+  end
+
 end

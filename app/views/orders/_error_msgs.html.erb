@@ -1,0 +1,10 @@
+<% if error_msgs.any?  %>
+  <div id="error_explanation">
+    <h3>Please resolve the errors below in order to place your order</h3>
+    <ul>
+      <% error_msgs.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
