@@ -1,0 +1,35 @@
+<div>
+  <h2>Enter Billing Details</h2>
+  <% if error_msgs.any?  %>
+    <div id="error_explanation">
+      <h3>Please resolve the errors below in order to place your order.</h3>
+      <ul>
+        <% error_msgs.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= fields_for :customer do |c| %>
+    <p><%= c.label :name %></p>
+    <p><%= c.text_field :name, required: true %></p>
+    <p><%= c.label :email %></p>
+    <p><%= c.text_field :email, required: true %></p>
+  <% end %>
+  <p><%= f.label :cc_number, "Credit Card Number" %></p>
+  <p><%= f.text_field :cc_number, required: true %></p>
+  <p><%= f.label :cc_security_code, "CVV Code" %></p>
+  <p><%= f.text_field :cc_security_code, required: true %></p>
+  <p><%= f.label :cc_expiration, "Expiration Date" %></p>
+  <p>
+    <%= f.date_select :cc_expiration, {
+                        use_two_digit_numbers: true,
+                        discard_day: true,
+                        order: [:month, :year],
+                        include_blank: true,
+                        start_year: Date.today.year
+                      }, {
+                        required: true
+                      } %>
+  </p>
+</div>

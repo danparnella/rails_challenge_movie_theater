@@ -1,5 +1,11 @@
 <li>
-  <p><%= formatted_time(showtime) %></p>
+  <p>
+    <%= link_to formatted_time(showtime),
+                showtime_orders_path(showtime),
+                aria: {
+                  label: "Select the #{formatted_time(showtime)} showing of #{showtime.movie.name} on #{formatted_date(showtime.date_time.to_date)}"
+                } %>
+  </p>
   <p><%= "Cost: $#{cost_dollars(showtime)} per ticket" %></p>
-  <p><%= "Seats Available: #{showtime.tickets_available}" %></p>
+  <p><%= "Tickets Available: #{showtime.tickets_available}" %></p>
 </li>

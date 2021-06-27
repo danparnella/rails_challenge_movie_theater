@@ -30,4 +30,8 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      order:
+        cc_number: "Credit Card Number"
+        cc_security_code: "CVV Code"
