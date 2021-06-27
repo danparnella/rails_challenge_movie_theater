@@ -1,0 +1,28 @@
+<h1>Summary</h1>
+
+<% if @no_orders %>
+  <p>No orders have been placed yet!</p>
+<% else %>
+  <p>Most popular movies:</p>
+  <ul>
+    <% @popular_movies.each do |movie| %>
+      <li><%= movie.name %></li>
+    <% end %>
+  </ul>
+
+  <p>Most popular times of the day to see a movie:</p>
+  <ul>
+    <% @popular_times.each do |time| %>
+      <li><%= time %></li>
+    <% end %>
+  </ul>
+
+  <p><%= "Total Revenue: $#{to_dollars(@total_revenue)}" %></p>
+
+  <p>Revenue by day of the week:</p>
+  <ul>
+    <% @daily_total_revenues.each do |revenue_for_day| %>
+      <li><%= "#{revenue_for_day[:day]}: $#{to_dollars(revenue_for_day[:revenue])}" %></li>
+    <% end %>
+  </ul>
+<% end %>

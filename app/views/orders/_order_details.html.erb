@@ -8,7 +8,7 @@
                          value: order.quantity || 1,
                          id: "ticket-quantity-selector",
                          required: true %>
-    <%= " x $#{cost_dollars(showtime.cost)} per ticket" %>
+    <%= " x $#{to_dollars(showtime.cost)} per ticket" %>
   </p>
   <p>
     Total Cost: <%= content_tag(:span, data: { ticket_cost: showtime.cost }, id: "total-cost-line-item") do %><% end %>
