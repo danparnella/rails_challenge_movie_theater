@@ -1,6 +1,6 @@
 # TODO: Build Navigation
 
-class AdminDashboardController < ApplicationController
+class AdminController < ApplicationController
   def summary
     if Order.all.any?
       @popular_movies = ordered_showtimes.map(&:movie).uniq[0..2]

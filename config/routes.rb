@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'admin_dashboard/summary'
-  get 'admin_dashboard/orders'
+  get 'admin/summary'
+  get 'admin/orders'
 
   resources :showtimes do
     get '/', to: 'orders#new'
