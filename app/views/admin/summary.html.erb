@@ -19,12 +19,12 @@
     <% end %>
   </ul>
 
-  <p><%= "Total Revenue: $#{to_dollars(@total_revenue)}" %></p>
-
-  <p>Revenue by day of the week:</p>
+  <p>Total revenue by day of the week:</p>
   <ul>
     <% @daily_total_revenues.each do |revenue_for_day| %>
       <li><%= "#{revenue_for_day[:day]}: $#{to_dollars(revenue_for_day[:revenue])}" %></li>
     <% end %>
   </ul>
+
+  <p><%= "Total Revenue: $#{to_dollars(@total_revenue)}" %></p>
 <% end %>
