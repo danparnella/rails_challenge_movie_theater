@@ -13,3 +13,5 @@
   <p><%= "Email: #{@order.customer.email}" %></p>
   <p><%= "Credit card ending in: #{cc_last_4_digits(@order.cc_number)}" %></p>
 </div>
+
+<%= link_to 'Return to all Showtimes', root_path %>
