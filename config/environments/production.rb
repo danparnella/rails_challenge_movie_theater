@@ -7,20 +7,20 @@ Rails.application.configure do
     #     resource '*', headers: :any, methods: :any
     #   end
     # end
-    
+
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.default_url_options = { host: ENV['APPLICATION_ROOT_URL'] }
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-    address: ENV['EMAIL_HOST_ADDRESS'],
+    address: 'smtp.sendgrid.net',
     port: 587,
     domain: ENV['APPLICATION_ROOT_URL'],
-    authentication: 'plain',
+    authentication: :plain,
     enable_starttls_auto: true,
-    user_name: ENV['EMAIL_USERNAME'],
-    password: ENV['EMAIL_PASSWORD']
+    user_name: 'apikey',
+    password: ENV['SENDGRID_API_KEY']
   }
   # Settings specified here will take precedence over those in config/application.rb.
 
