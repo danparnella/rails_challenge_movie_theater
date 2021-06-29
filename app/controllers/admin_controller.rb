@@ -1,5 +1,3 @@
-# TODO: Build Navigation
-
 class AdminController < ApplicationController
   def summary
     if Order.all.any?
