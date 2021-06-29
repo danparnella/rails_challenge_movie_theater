@@ -6,7 +6,7 @@ class AdminController < ApplicationController
       @popular_movies = ordered_showtimes.map(&:movie).uniq[0..2]
       @popular_times = ordered_times.uniq[0..2]
       @total_revenue = Order.all.map(&:total_cost).sum
-      @daily_total_revenues = DAYS_OF_THE_WEEK.map { |day| day_with_revenue(day) }
+      @daily_total_revenues = DAYS_OF_THE_WEEK.map(&method(:day_with_revenue))
     else
       @no_orders = true
     end
@@ -22,13 +22,9 @@ class AdminController < ApplicationController
     end
 
     def ordered_times
-      ordered_date_times.map do |date_time|
-        date_time.strftime("%-l:%M %p")
+      ordered_showtimes.map do |showtime|
+        helpers.formatted_time(showtime)
       end
-    end
-
-    def ordered_date_times
-      ordered_showtimes.pluck(:date_time)
     end
 
     def day_with_revenue(day)
