@@ -1,18 +1,18 @@
-<!-- # <app_name> -->
+# Danny's Rails Coding Challenge - Movie Theater App
 
 ## Getting Started
-### Initial Project Setup
-If you created this project, instructions for setting up GitHub, Heroku, and other integrations can be found in the **[Project Setup Checklist](PROJECT_SETUP_CHECKLIST.md)**.
-
 ### Running in Development
 <!-- TODO: update the below accordingly -->
-- `git clone git@github.com:LaunchPadLab/<project_name>.git`
-- `cd <project_name>`
+- `git clone git@github.com:danparnella/rails_challenge_movie_theater.git`
+- `cd rails_challenge_movie_theater`
 - `bundle install`
-- `load_secrets`
-- `bundle exec rake db:create db:migrate db:seed`
+- ask Danny for secrets
+- `rails db:create db:migrate db:seed`
 - `rails server`
 - `open localhost:3000`
+
+### Thoughts while Completing
+- I compiled requirements, a link to a DB diagram, some future enhancements / issues and at least one thing I would do differently here: [Thoughts Document](Thoughts.md)
 
 <!--
   TODO: Additional notes about your app
