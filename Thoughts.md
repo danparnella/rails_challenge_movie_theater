@@ -53,6 +53,9 @@
 - Tooltip to explain CVV Code
 - Timer to hold tickets so they aren't purchased simultaneously
 - Affordance for canceled/refunded orders
+- Styles
+- Issue with Customer/Order creation
+  - Customer will be created even if there are errors when creating the Order. Really the new Customer should only be created when an Order is also going to be successfully created.
 
 ## Would Have Done Differently
 - Probably would have been easier to store date and time separately for showtimes

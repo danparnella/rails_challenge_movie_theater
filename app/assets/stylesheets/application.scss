@@ -1,3 +1,12 @@
 // Application styles go here.
-// You can import relative files using @import: 
+// You can import relative files using @import:
 // @import 'components/card'
+
+.field_with_errors {
+  display: inline-block;
+
+  input {
+    border: 1.5px solid red;
+    border-radius: 3px;
+  }
+}

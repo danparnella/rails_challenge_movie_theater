@@ -3,24 +3,24 @@
   <%= render 'error_msgs', error_msgs: error_msgs %>
   <%= fields_for :customer do |c| %>
     <p>
-      <%= c.label :name %>:
+      <%= c.label :name, "Name:" %>
       <%= c.text_field :name, required: true %>
     </p>
     <p>
-      <%= c.label :email %>:
+      <%= c.label :email, "Email:" %>
       <%= c.text_field :email, required: true %>
     </p>
   <% end %>
   <p>
-    <%= f.label :cc_number, "Credit Card Number" %>:
+    <%= f.label :cc_number, "Credit Card Number:" %>
     <%= f.text_field :cc_number, required: true %>
   </p>
   <p>
-    <%= f.label :cc_security_code, "CVV Code" %>:
+    <%= f.label :cc_security_code, "CVV Code:" %>
     <%= f.text_field :cc_security_code, required: true %>
   </p>
   <p>
-    <%= f.label :cc_expiration, "Expiration Date" %>:
+    <%= f.label :cc_expiration, "Expiration Date:" %>
     <%= f.date_select :cc_expiration, {
                         use_two_digit_numbers: true,
                         discard_day: true,
