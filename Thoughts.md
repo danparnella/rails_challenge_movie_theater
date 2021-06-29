@@ -46,16 +46,16 @@
 
 
 ## Future Enhancements
-- Validations for datetimes
+- Adding images and descriptions for movies
 - Encrypting CC data (although normally this would just be sent to a payment processor and we wouldn't store any of this data)
 - Implement [Money Gem](https://github.com/RubyMoney/money)
-- Redirect to root if trying to access order show view outside of that specific order flow
+- Redirect to root if trying to access completed order show view outside of that specific order flow
 - Tooltip to explain CVV Code
 - Timer to hold tickets so they aren't purchased simultaneously
 - Affordance for canceled/refunded orders
-- Styles
 - Issue with Customer/Order creation
   - Customer will be created even if there are errors when creating the Order. Really the new Customer should only be created when an Order is also going to be successfully created.
+- Styles
 
 ## Would Have Done Differently
 - Probably would have been easier to store date and time separately for showtimes
