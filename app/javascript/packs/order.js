@@ -10,6 +10,6 @@ function updateTotalCost({ target: { value: quantity } }) {
 const quantitySelector = document.getElementById("ticket-quantity-selector")
 quantitySelector.addEventListener("change", updateTotalCost)
 
-updateTotalCost({ target: { value: 1 }})
+updateTotalCost({ target: quantitySelector })
 
 
