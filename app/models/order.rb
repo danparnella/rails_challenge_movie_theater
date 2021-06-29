@@ -7,6 +7,8 @@ class Order < ApplicationRecord
   validates :cc_expiration, presence: true
   validates :cc_security_code, presence: true, length: 3..4
 
+  scope :by_showtime, -> (direction = :ASC) { joins(:showtime).merge(Showtime.by_date_time(direction)) }
+
   def total_cost
     quantity * showtime.cost
   end

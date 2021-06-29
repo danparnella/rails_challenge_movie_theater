@@ -10,7 +10,7 @@
                     label: "Select the #{formatted_time(showtime)} showing of #{showtime.movie.name} on #{formatted_date(showtime.date_time.to_date)}"
                   } %>
     </p>
-    <p><%= "Cost: $#{cost_dollars(showtime.cost)} per ticket" %></p>
+    <p><%= "Cost: $#{to_dollars(showtime.cost)} per ticket" %></p>
     <p><%= "Tickets Available: #{showtime.tickets_available}" %></p>
   <% end %>
 </li>

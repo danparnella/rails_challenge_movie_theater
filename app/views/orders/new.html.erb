@@ -1,4 +1,7 @@
+<% provide(:title, "#{@showtime.movie.name} Ticket Order") %>
+
 <h1><%= "Purchase tickets for #{@showtime.movie.name}" %></h1>
+<%= link_to 'Back to Showtimes', root_path %>
 <p>
   <%= "You have selected the #{formatted_time(@showtime)}
        showing of #{@showtime.movie.name} on

@@ -1,3 +1,5 @@
+<% provide(:title, "Successful Order") %>
+
 <h1>Your order has been placed successfully</h1>
 <p>See you at the movies!</p>
 
@@ -6,8 +8,10 @@
   <p><%= @order.showtime.movie.name %></p>
   <p><%= "Starting at #{formatted_time(@order.showtime)} on #{formatted_date(@order.showtime.date_time.to_date)}" %></p>
   <p><%= "Number of Tickets: #{@order.quantity}" %></p>
-  <p><%= "Total Cost: $#{cost_dollars(@order.total_cost)}" %></p>
+  <p><%= "Total Cost: $#{to_dollars(@order.total_cost)}" %></p>
   <p><%= "Name: #{@order.customer.name}" %></p>
   <p><%= "Email: #{@order.customer.email}" %></p>
   <p><%= "Credit card ending in: #{cc_last_4_digits(@order.cc_number)}" %></p>
 </div>
+
+<%= link_to 'Return to all Showtimes', root_path %>

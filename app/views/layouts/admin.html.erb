@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= yield(:title) %> | Marvelous Matinée Movies</title>
+    <title><%= yield(:title) %> | Administrator</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -14,7 +14,13 @@
     <nav>
       <ul>
         <li>
-          <%= link_to "Administrator", admin_summary_path %>
+          <%= link_to "Home - Showtimes", root_path %>
+        </li>
+        <li>
+          <%= link_to "Summary", admin_summary_path %>
+        </li>
+        <li>
+          <%= link_to "Orders", admin_orders_path %>
         </li>
       </ul>
     </nav>
